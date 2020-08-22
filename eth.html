@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="PYRO Reloaded">
+        <meta name="author" content="MrFUNCT1ON">
+
+        <title>PYRO Reloaded</title>
+
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/pyro.css" rel="stylesheet">
+
+        <script src="assets/js/modernizr.min.js"></script>
+        
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body class="wallpaper">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #000;">
+                <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" width="40px" /> PYRO Reloaded</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav mr-auto">
+                       <li class="nav-item"><a class="nav-link" href="eth.html"><i class="fas fa-fire text-white"></i> PYRO (ETH)</a></li>
+                       <li class="nav-item"><a class="nav-link" href="tron.html"><i class="fas fa-fire text-white"></i> PYRO (TRX)</a></li>
+                    </ul>
+                    
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="https://discord.gg/68NyMnB" target="_blank"><i class="fab fa-discord text-white"></i> Discord</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://github.com/FunctionIsland" target="_blank"><i class="fab fa-github text-white"></i> GitHub</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://etherscan.io/token/0x14409b0fc5c7f87b5dad20754fe22d29a3de8217" target="_blank"><i class="fas fa-search-dollar text-white"></i> Contract</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <main id="content" role="main">
+            <div class="container" style="padding-top: 100px;">
+                <div class="row jumbotron glassPanel roundedCorners text-white">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col text-center">
+                                <img src="assets/img/logo.png" width="40px" height="40px" />
+                                <h1>PYRO Reloaded</h1>
+                                <p>A backup interface made with &lt;3 by MrFUNCT1ON</p>
+                                <p class="text-success">You have <span id="myTokens">-</span> PYRO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <div class="card text-white glassPanel silverBorder roundedCorners">
+                            <div class="card-header text-left"><h5>My PYRO Staking</h5></div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <h3><span id="myFrozen">-</span></h3>
+                                        <small>Your Staked PYRO</small>
+                                    </div>
+                                    
+                                    <div class="col text-center">
+                                        <h3><span id="myDividends">-</span></h3>
+                                        <small>Your Earnings</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <button type="button" class="btn btn-block btn-md btn-success roundedCorners" id="withdraw">Withdraw Earnings to Wallet</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    
+                    <div class="col-md-6 text-center">
+                        <div class="card text-white glassPanel silverBorder roundedCorners">
+                            <div class="card-header text-left"><h5>PYRO Stats &amp; Info</h5></div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <h3><span id="totalFrozen">-</span></h3>
+                                        <small>Total Staked PYRO</small>
+                                    </div>
+                                    
+                                    <div class="col text-center">
+                                        <h3><span id="totalSupply">-</span></h3>
+                                        <small>Remaining Supply</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <a class="btn btn-block btn-md btn-dark roundedCorners" href="https://etherscan.io/token/0x14409b0fc5c7f87b5dad20754fe22d29a3de8217" target="_blank">View Contract</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                <br />
+                
+                
+                
+                <div class="row">
+                    <!-- Stake SUVC -->
+                    <div class="col-md-3">
+                        <div class="card text-white glassPanel greenBorder roundedCorners">
+                            <div class="card-header">Stake PYRO</div>
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-left">
+                                            <p>1000 Tokens Minimum</p>
+                                            <label>PYRO to Stake: </label>
+                                            <input type="number" class="form-control" placeholder="100" id="freezeAmount" /><br />
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <button class="btn btn-block btn-md btn-success roundedCorners" id="freeze">Stake</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    
+                    <!-- Unstake SUVC -->
+                    <div class="col-md-3">
+                        <div class="card text-white glassPanel redBorder roundedCorners">
+                            <div class="card-header">Unstake PYRO</div>
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-left">
+                                            <p>5% Unstake Tax</p>
+                                            <label>PYRO to Unstake: </label>
+                                            <input type="number" class="form-control" placeholder="100" id="unfreezeAmount" /><br />
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <button class="btn btn-block btn-md btn-danger roundedCorners" id="unfreeze">Unstake</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    
+                    <!-- Transfer SUVC -->
+                    <div class="col-md-6">
+                        <div class="card text-white glassPanel orangeBorder roundedCorners">
+                            <div class="card-header">Transfer PYRO</div>
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4 text-left">
+                                            <label>PYRO to Transfer: </label>
+                                            <input type="number" class="form-control" placeholder="100" id="transferAmount" /><br />
+                                        </div>
+                                        
+                                        <div class="col-md-8 text-left">
+                                            <label>Recipient Address: </label>
+                                            <input type="text" class="form-control" placeholder="0x..." id="transferReceiver" /><br />
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <p>5&#37; Transfer Tax</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <button class="btn btn-block btn-md btn-warning roundedCorners" id="transfer">Transfer</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                <br />
+            </div>
+            
+            <!-- Bottom Nav -->
+            <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark" style="background-color: rgba(0,0,0,1);">
+                <ul class="navbar-nav mr-auto ml-auto">
+                    <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+                    <coingecko-coin-price-marquee-widget  coin-ids="bitcoin,ethereum,ethereum-classic,universalcoin" currency="usd" background-color="#000000" locale="en" font-color="#ffffff"></coingecko-coin-price-marquee-widget>
+                </ul>
+            </nav>
+        </main>
+        
+        <footer>
+            <div class="container">
+                <div class="row jumbotron glassPanel roundedCorners text-white">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <b>PYRO Reloaded</b><br />
+                                <p>
+                                    This project and its code are Open Source, released under the MIT License. <a class="text-success" href="https://opensource.org/licenses/MIT" target="_blank">Click Here</a> to learn more.
+                                </p>
+                            </div>
+                        
+                            <div class="col-md-3">
+                                <b class="text-muted">SOCIAL</b><br />
+                                <a class="text-white" href="https://discord.gg/68NyMnB" target="_blank">Discord</a><br />
+                            </div>
+                        
+                            <div class="col-md-3">
+                                <b class="text-muted">RESOURCES</b><br />
+                                <a class="text-white" href="https://github.com/FunctionIsland">GitHub</a><br />
+                                <a class="text-white" href="https://etherscan.io/token/0x14409b0fc5c7f87b5dad20754fe22d29a3de8217" target="_blank">Smart Contract</a><br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <br />
+        <br />
+        <br />
+        
+        <!-- Bootstrap core JavaScript -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="assets/js/tether.min.js"></script>
+        <script src="assets/js/common.min.js"></script>
+        <script src="assets/js/d3.v5.min.js"></script>
+        <script src="assets/js/alertify.min.js"></script>
+        <script src="assets/js/semantic.min.js"></script>
+        <script src="assets/js/moment.min.js"></script>
+        <script src="assets/js/web3.min.js"></script>
+        <script src="assets/js/clipboard.min.js"></script>
+        <script src="assets/js/lodash.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+
+        <script src="assets/lib/pyro-eth.js"></script>
+        <script src="assets/lib/metamask-adapter.js"></script>
+    </body>
+</html>
