@@ -27,9 +27,9 @@
 
                 <div class="collapse navbar-collapse" id="navbarColor02">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a class="nav-link" href="eth.html"><i class="fas fa-fire text-white"></i> PYRO (ETH)</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tron.html"><i class="fas fa-fire text-white"></i> PYRO (TRX)</a></li>
-                        <li class="nav-item"><a class="nav-link" href="market.html"><i class="fas fa-bullhorn text-white"></i> MARKET DATA</a></li>
+                       <li class="nav-item"><a class="nav-link" href="eth.html"><i class="fas fa-fire text-white"></i> PYRO (ETH)</a></li>
+                       <li class="nav-item"><a class="nav-link" href="tron.html"><i class="fas fa-fire text-white"></i> PYRO (TRX)</a></li>
+                       <li class="nav-item"><a class="nav-link" href="market.html"><i class="fas fa-bullhorn text-white"></i> MARKET DATA</a></li>
                     </ul>
                     
                     <ul class="navbar-nav ml-auto">
@@ -57,14 +57,12 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card glassPanel roundedCorners orangeBorder">
-                                <div class="card-header text-white">What is This?</div>
+                                <div class="card-header text-white">PYRO (ETH)</div>
                                 <div class="card-body text-white">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col text-center">
-                                                <p>
-                                                    PYRO Reloaded is an interface built by MrFUNCT1ON, for holders of PYRO on ETH and TRON. Recently, you may have heard the news that the creator of the PYRO project has abandoned and jumped ship. Along with him, he took down the website at <b>pyro.network</b> - so this interface is to enable the holders of the PYRO token, to still manage their HODLs!
-                                                </p>
+                                                <coingecko-coin-price-chart-widget  coin-id="pyro-network" currency="usd" height="300" locale="en" background-color="#ffffff"></coingecko-coin-price-chart-widget>
                                             </div>
                                         </div>
                                     </div>
@@ -75,16 +73,12 @@
                         
                         <div class="col-md-6">
                             <div class="card glassPanel roundedCorners orangeBorder">
-                                <div class="card-header text-white">Join the Community</div>
+                                <div class="card-header text-white">PYRO (TRON)</div>
                                 <div class="card-body text-white">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col text-center">
-                                                <p>
-                                                    The Discord server is still active, and the code to this interface is Open Source, available on GitHub - check them both out!
-                                                </p>
-                                                <a class="btn btn-block btn-md btn-primary roundedCorners" href="https://discord.gg/68NyMnB" target="_blank">Join the Discord</a><br />
-                                                <a class="btn btn-block btn-md btn-secondary roundedCorners" href="https://github.com/FunctionIsland" target="_blank">View the Source</a>
+                                                <coingecko-coin-price-chart-widget  coin-id="pyro-network-tron" currency="usd" height="300" locale="en" background-color="#ffffff"></coingecko-coin-price-chart-widget>
                                             </div>
                                         </div>
                                     </div>
@@ -92,17 +86,6 @@
                             </div>
                             <br />
                         </div>
-                    </div>
-                    <br />
-                
-                <div class="row jumbotron glassPanel roundedCorners">
-                    <div class="col text-center">
-                        <p>
-                            <b>DISCLAIMER: </b><br />
-                            This website is provided &quot;as-is&quot;, with no guarantee of being free from bugs or errors.<br />
-                            If you spot an issue, feel free to submit a Pull Request on GitHub, or open an issue.
-                        </p>
-                    </div>
                 </div>
                 <br />
             </div>
@@ -110,7 +93,6 @@
             <!-- Bottom Nav -->
             <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark" style="background-color: rgba(0,0,0,1);">
                 <ul class="navbar-nav mr-auto ml-auto">
-                    <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
                     <coingecko-coin-price-marquee-widget  coin-ids="bitcoin,ethereum,pyro-network,pyro-network-tron,tron" currency="usd" background-color="#000000" locale="en" font-color="#ffffff"></coingecko-coin-price-marquee-widget>
                 </ul>
             </nav>
@@ -153,5 +135,8 @@
         <script src="assets/js/tether.min.js"></script>
         <script src="assets/js/common.min.js"></script>
         <script src="assets/js/popper.min.js"></script>
+        
+        <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+        <script src="https://widgets.coingecko.com/coingecko-coin-price-chart-widget.js"></script>
     </body>
 </html>
